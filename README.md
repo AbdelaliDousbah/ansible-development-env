@@ -5,28 +5,25 @@ This project is designed to establish an Ansible development environment using V
 ### Description of the Environment
 
 - **Host Machine**: The control node for Ansible, which executes playbooks and manages configuration tasks across the VMs.
+- **Virtual Machines**: Includes an Ubuntu 20.04 VM and a CentOS 8 VM, provisioned with specified resource allocations.
+- **Vagrant with Libvirt**: Manages VM provisioning and lifecycle, with configurations defined in the `Vagrantfile` and VM management handled by Libvirt.
 
-- **Virtual Machines**:
-  - **Ubuntu 20.04 VM**: One of the managed nodes. It is provisioned using the `generic/ubuntu2004` box and is allocated 1 GB of memory and 1 CPU.
-  - **CentOS 8 VM**: The second managed node, utilizing the `generic/centos8` box with the same resource configuration as the Ubuntu VM.
-
-- **Vagrant with Libvirt**:
-  - **Vagrant**: Handles the provisioning and management of the VMs. The `Vagrantfile` defines the VM configurations, including box types and resource allocations.
-  - **Libvirt**: Serves as the provider for Vagrant, managing VM lifecycle and resources.
-
-The VMs are configured to enable Ansible to manage them through SSH. A dynamic inventory script, `vagrant_inventory.py`, is used to generate the inventory file for Ansible by extracting SSH configurations from Vagrant.
+The VMs are configured to enable Ansible to manage them through SSH. A dynamic inventory script, `vagrant_inventory.py`, generates the inventory file for Ansible.
 
 ### Purpose of the Setup
 
-- **Development and Testing**: Provides a controlled environment for developing and testing Ansible playbooks and configurations. The use of both Ubuntu and CentOS VMs ensures compatibility and testing across different Linux distributions.
+- **Development and Testing**: Provides a controlled environment for developing and testing Ansible playbooks and configurations.
+- **Learning and Experimentation**: Offers a practical environment for experimenting with Ansible without impacting your primary system.
+- **Configuration Management**: Demonstrates the use of Ansible in conjunction with Vagrant-managed VMs for automated setup and node management.
 
-- **Learning and Experimentation**: Offers a practical environment for experimenting with Ansible without impacting your primary system. Vagrant and Libvirt simplify VM management, allowing for quick environment provisioning and teardown.
+### Topics Covered
 
-- **Configuration Management**: Demonstrates the use of Ansible in conjunction with Vagrant-managed VMs, focusing on automated setup and node management.
+- **Ansible Basics**: Introduction to Ansible, its architecture, workflow, and installation.
+- **Ad-Hoc Commands**: Practical examples of using Ansible ad-hoc commands, categorized into system management, file operations, package management, service management, user management, resource management, log management, network management, application deployment, and scheduled tasks.
 
 ### Project Status
 
-Please note that this project is still in progress. Future updates will include additional sections covering various Ansible topics and more comprehensive instructions.
+**This project is actively in progress.** The current structure includes foundational topics and practical examples, but ongoing updates will introduce additional sections and more comprehensive instructions as the project evolves.
 
 ### Installation and Setup Instructions
 
